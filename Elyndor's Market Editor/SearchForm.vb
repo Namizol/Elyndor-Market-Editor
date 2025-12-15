@@ -3,6 +3,10 @@
 Public Class SearchForm
 
     Private Sub SearchForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
+            Me.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath)
+        Catch
+        End Try
         ThemeManager.ApplyTheme(Me)
     End Sub
 

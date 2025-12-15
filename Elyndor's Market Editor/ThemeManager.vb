@@ -32,7 +32,7 @@ End Class
 
 Public Module ThemeManager
     Private themeLoaded As Boolean = False
-    Public CurrentTheme As AppTheme = AppTheme.Light
+    Public CurrentTheme As AppTheme = AppTheme.Dark
     Private LightPalette As ThemePalette
     Private DarkPalette As ThemePalette
 
@@ -190,15 +190,15 @@ Public Module ThemeManager
     End Function
 
     Private Sub InitPalettes()
-        ' Rappelz-inspirierte Paletten (Gold/Blau für Akzente)
+        ' Rappelz-inspirierte Paletten (Gold/Blau)
         LightPalette = New ThemePalette() With {
-            .Background = Color.FromArgb(244, 244, 240), 'helle Pergament-Anmutung
+            .Background = Color.FromArgb(244, 244, 240),
             .Surface = Color.FromArgb(250, 250, 247),
             .Panel = Color.FromArgb(234, 233, 227),
             .Border = Color.FromArgb(210, 204, 190),
             .TextPrimary = Color.FromArgb(42, 38, 32),
             .TextSecondary = Color.FromArgb(94, 87, 76),
-            .Accent = Color.FromArgb(34, 102, 180), 'königsblau
+            .Accent = Color.FromArgb(34, 102, 180),
             .AccentText = Color.White,
             .Neutral = Color.FromArgb(224, 221, 213),
             .NeutralHover = Color.FromArgb(214, 210, 202),
@@ -210,19 +210,19 @@ Public Module ThemeManager
             .HeaderText = Color.FromArgb(42, 38, 32),
             .GridLine = Color.FromArgb(214, 210, 202),
             .AltRow = Color.FromArgb(239, 237, 232),
-            .Selection = Color.FromArgb(220, 210, 185), 'leicht goldig
+            .Selection = Color.FromArgb(220, 210, 185),
             .SelectionText = Color.FromArgb(42, 38, 32),
             .InputBack = Color.White
         }
 
         DarkPalette = New ThemePalette() With {
-            .Background = Color.FromArgb(18, 20, 28), 'dunkler Schiefer
+            .Background = Color.FromArgb(18, 20, 28),
             .Surface = Color.FromArgb(26, 28, 38),
             .Panel = Color.FromArgb(24, 26, 36),
             .Border = Color.FromArgb(58, 58, 70),
             .TextPrimary = Color.FromArgb(230, 224, 210),
             .TextSecondary = Color.FromArgb(171, 164, 150),
-            .Accent = Color.FromArgb(226, 173, 68), 'Goldakzent
+            .Accent = Color.FromArgb(226, 173, 68),
             .AccentText = Color.FromArgb(24, 24, 24),
             .Neutral = Color.FromArgb(48, 52, 64),
             .NeutralHover = Color.FromArgb(63, 68, 82),
@@ -234,7 +234,7 @@ Public Module ThemeManager
             .HeaderText = Color.FromArgb(230, 224, 210),
             .GridLine = Color.FromArgb(65, 70, 84),
             .AltRow = Color.FromArgb(32, 36, 48),
-            .Selection = Color.FromArgb(61, 52, 36), 'goldbraune Auswahl
+            .Selection = Color.FromArgb(61, 52, 36),
             .SelectionText = Color.FromArgb(236, 230, 215),
             .InputBack = Color.FromArgb(35, 38, 50)
         }

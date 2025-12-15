@@ -10,6 +10,10 @@ Public Class MainForm
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         RowIndex = 0
+        Try
+            Me.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath)
+        Catch
+        End Try
         ThemeManager.LoadTheme()
         CheckBoxTheme.Checked = (ThemeManager.CurrentTheme = AppTheme.Dark)
         UpdateThemeToggleText()
@@ -138,4 +142,7 @@ Public Class MainForm
         End If
     End Sub
 
+    Private Sub LabelTitle_Click(sender As Object, e As EventArgs) Handles LabelTitle.Click
+
+    End Sub
 End Class

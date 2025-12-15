@@ -32,6 +32,10 @@
             TextBox3.Text = ""
             TextBox4.Text = ""
         End If
+        Try
+            Me.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath)
+        Catch
+        End Try
         ThemeManager.ApplyTheme(Me)
     End Sub
 End Class
