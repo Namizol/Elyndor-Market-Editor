@@ -2,6 +2,10 @@
 
 Public Class SearchForm
 
+    Private Sub SearchForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        ThemeManager.ApplyTheme(Me)
+    End Sub
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Label2.Text = "Suche..."
         Label2.Refresh()

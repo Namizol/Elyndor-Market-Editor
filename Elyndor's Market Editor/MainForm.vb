@@ -10,6 +10,10 @@ Public Class MainForm
 
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         RowIndex = 0
+        ThemeManager.LoadTheme()
+        CheckBoxTheme.Checked = (ThemeManager.CurrentTheme = AppTheme.Dark)
+        UpdateThemeToggleText()
+        ThemeManager.ApplyTheme(Me)
         If IO.File.Exists("config") Then
             ReloadStartupWindow()
         Else
@@ -73,6 +77,19 @@ Public Class MainForm
 
     Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
         ' Nichts tun – DataGrid liefert teils unnötige Meldungen.
+    End Sub
+
+    Private Sub CheckBoxTheme_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBoxTheme.CheckedChanged
+        If CheckBoxTheme.Checked Then
+            ThemeManager.SetTheme(AppTheme.Dark)
+        Else
+            ThemeManager.SetTheme(AppTheme.Light)
+        End If
+        UpdateThemeToggleText()
+    End Sub
+
+    Private Sub UpdateThemeToggleText()
+        CheckBoxTheme.Text = If(ThemeManager.CurrentTheme = AppTheme.Dark, "Dark", "Light")
     End Sub
 
     Private Sub UpdateLog()

@@ -32,5 +32,6 @@
             TextBox3.Text = ""
             TextBox4.Text = ""
         End If
+        ThemeManager.ApplyTheme(Me)
     End Sub
 End Class

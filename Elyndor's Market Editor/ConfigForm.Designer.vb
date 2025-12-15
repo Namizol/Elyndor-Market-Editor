@@ -48,7 +48,7 @@ Partial Class ConfigForm
         '
         Me.TextBox3.Location = New System.Drawing.Point(129, 78)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(7)
+        Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox3.Size = New System.Drawing.Size(180, 20)
         Me.TextBox3.TabIndex = 2
         '
@@ -106,6 +106,8 @@ Partial Class ConfigForm
         Me.Button1.Text = "Speichern"
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(74, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.Button1.ForeColor = System.Drawing.Color.White
         '
         'ConfigForm
