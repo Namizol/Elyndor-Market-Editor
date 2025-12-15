@@ -1,6 +1,6 @@
 # Elyndor Market Editor
 
-Editor für Elyndor-Marktplätze (VB.NET, .NET Framework 4.8) plus C++/CLI-UI-Prototyp. Lädt/editiert/speichert Markteinträge aus SQL Server.
+Editor für Rappelz-Marktplätze. Lädt/editiert/speichert Markteinträge aus SQL Server.
 
 ## Features
 - Märkte laden/wechseln, Einträge hinzufügen/löschen, SortID automatisch fortlaufend.
